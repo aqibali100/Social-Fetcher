@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(req: NextRequest) {
-   const body = await req.json();
-    const url = body?.url;
   const { searchParams } = new URL(req.url);
   const videoId = searchParams.get('videoId');
 
@@ -23,10 +21,11 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: 'Video not found' }, { status: 404 });
     }
 
-    const tags = data.items[0].snippet.tags || [];
+    const tags: string[] = data.items[0].snippet.tags || [];
 
     return NextResponse.json({ tags });
   } catch (err) {
-    return NextResponse.json({ error: 'API error', detail: err.message }, { status: 500 });
+    const error = err as Error;
+    return NextResponse.json({ error: 'API error', detail: error.message }, { status: 500 });
   }
 }

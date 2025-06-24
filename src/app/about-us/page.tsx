@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react';
 import { ArrowLeft, Users, Target, Award, Globe, Shield, Zap, Heart, Star, Download, Play, Image, Smartphone, Monitor, Headphones, Code, Rocket, CheckCircle, TrendingUp, Clock, MapPin } from 'lucide-react';
 import Link from 'next/link';
-import RootLayout from '../layout';
 import Head from 'next/head';
 
 interface Particle {

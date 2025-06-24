@@ -45,7 +45,7 @@ export default function Footer() {
         "Other Tools": [
             { name: 'Slug Generator', href: '/slug-generator' },
             { name: 'Word Counter', href: '/word-counter' },
-            { name: 'PNG to JPG Converter', href: 'png-to-jpg-converter' },
+            { name: 'PNG to JPG Converter', href: '/png-to-jpg-converter' },
             { name: 'JPG to PNG Converter', href: '#' },
             { name: 'Video to Audio Converter', href: '#' },
             { name: 'PNG to PDF Converter', href: '#' },

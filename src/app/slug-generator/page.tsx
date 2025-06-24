@@ -14,9 +14,6 @@ import {
   Minus
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import RootLayout from '../layout';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 const seoProps = {
   title: "Slug Generator | Social Fetcher",
@@ -211,8 +208,6 @@ export default function SlugGenerator() {
   ];
 
   return (
-    <RootLayout seoProps={seoProps}>
-      <Header />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         <Particles />
 
@@ -617,7 +612,5 @@ export default function SlugGenerator() {
 
         </div>
       </div>
-      <Footer />
-    </RootLayout>
   );
 }

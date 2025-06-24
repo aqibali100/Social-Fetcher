@@ -17,10 +17,6 @@ import {
   Twitch,
   Camera,
 } from 'lucide-react';
-import { usePathname } from 'next/navigation';
-import RootLayout from './layout';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 const platforms = [
   {
     name: 'YouTube',
@@ -479,8 +475,6 @@ export default function Home() {
     };
   return (
     <>
-    <RootLayout seoProps={seoProps}>
-      <Header />
        <div className="relative isolate px-6 lg:px-8">
         <div
           aria-hidden="true"
@@ -858,7 +852,7 @@ export default function Home() {
         </section>
       </div>
 
-      <section className="relative py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 overflow-hidden">
+      {/* <section className="relative py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-10 animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-10 animate-pulse delay-1000"></div>
@@ -1033,7 +1027,7 @@ export default function Home() {
           overflow: hidden;
         }
       `}</style>
-      </section>
+      </section> */}
 
       <section className="py-20 px-4 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative overflow-hidden">
         <div className="absolute inset-0 bg-grid-gray-200/50 bg-[size:60px_60px] opacity-30" />
@@ -1156,8 +1150,6 @@ export default function Home() {
         }
       `}</style>
       </section>
-      <Footer />
-    </RootLayout>
     </>
   );
 }

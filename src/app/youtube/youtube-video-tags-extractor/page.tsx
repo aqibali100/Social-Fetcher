@@ -33,9 +33,6 @@ import {
   Image,
   Play
 } from 'lucide-react';
-import Header from '@/components/Header';
-import RootLayout from '@/app/layout';
-import Footer from '@/components/Footer';
 
 interface TagAnalytics {
   tag: string;
@@ -211,8 +208,6 @@ export default function YouTubeTagsExtractor() {
   }
 
   return (
- <RootLayout seoProps={seoProps}>
-    <Header />
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -629,7 +624,5 @@ export default function YouTubeTagsExtractor() {
         )}
       </div>
     </div>
-      <Footer />
-        </RootLayout>
   );
 }

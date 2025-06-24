@@ -55,9 +55,6 @@ import {
   Tablet
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import RootLayout from '@/app/layout';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 interface VideoFormat {
   itag: number;
@@ -437,8 +434,6 @@ const categoryId = videoData?.snippet?.categoryId;
 const categoryName = categoryMap[categoryId] || "Unknown";
 
   return (
-  <RootLayout>
-    <Header></Header>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
@@ -1424,7 +1419,5 @@ const categoryName = categoryMap[categoryId] || "Unknown";
         }
       `}</style>
     </div>
-    <Footer></Footer>
-  </RootLayout>
   );
 }

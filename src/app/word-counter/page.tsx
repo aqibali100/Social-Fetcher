@@ -12,9 +12,6 @@ import { Progress } from '@/components/ui/progress';
 import {FileText,Hash,Clock,Eye,BookOpen,Target,TrendingUp,Zap,BarChart3,PieChart,Activity,Sparkles,Copy,Check,Download,RefreshCw,Settings,Star,ArrowRight,MessageSquare,Globe,Search
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import RootLayout from '../layout';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 
 const Particles = () => {
   return (
@@ -229,8 +226,6 @@ export default function WordCounter() {
   }
 
   return (
-    <RootLayout seoProps={seoProps}>
-      <Header />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         <Particles />
         <section className="relative z-10 pt-30 pb-16 px-4">
@@ -705,7 +700,5 @@ export default function WordCounter() {
           </div>
         </section>
       </div>
-      <Footer />
-    </RootLayout>
   );
 }

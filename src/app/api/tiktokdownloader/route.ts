@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import Tiktok from '@tobyg74/tiktok-api-dl';
 
 function extractCleanTikTokUrl(url: string): string {
@@ -7,7 +7,7 @@ function extractCleanTikTokUrl(url: string): string {
   throw new Error('Invalid TikTok video URL format.');
 }
 
-export async function POST(req: Request) {
+export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const url = body?.url;

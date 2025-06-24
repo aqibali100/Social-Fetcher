@@ -1,6 +1,6 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(req) {
+export async function GET(req: NextRequest) {
    const body = await req.json();
     const url = body?.url;
   const { searchParams } = new URL(req.url);

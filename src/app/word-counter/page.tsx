@@ -360,7 +360,6 @@ export default function WordCounter() {
                     id="advanced"
                     checked={showAdvanced}
                     onCheckedChange={setShowAdvanced}
-                    style
                   />
                 </div>
               </div>

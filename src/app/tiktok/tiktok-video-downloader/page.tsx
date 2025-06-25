@@ -129,7 +129,7 @@ export default function TikTokDownloader() {
     });
   } catch (error) {
     console.error('Download error:', error);
-    alert('Error: ' + error.message);
+    // alert('Error: ' + error.message);
   } finally {
     setIsLoading(false);
   }

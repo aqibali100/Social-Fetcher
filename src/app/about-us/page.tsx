@@ -256,14 +256,6 @@ export default function AboutUs() {
         }
     ];
 
-    const seoProps = {
-        title: "About Us - Your Company Name",
-        description: "Learn more about Your Company Name, our mission, and values.",
-        keywords: "about, company, mission, values, Your Company Name",
-        author: "Your Name",
-        ogImage: "/images/about-og-image.jpg",
-    };
-
     return (
         <>
            <Head>
@@ -325,7 +317,7 @@ export default function AboutUs() {
 
                             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
                                 Social Fetcher was born from a simple belief: everyone should have easy access to the digital content they love.
-                                What started as a small project has grown into the world's most trusted video downloading platform,
+                                What started as a small project has grown into the world most trusted video downloading platform,
                                 serving millions of users across the globe.
                             </p>
 
@@ -389,8 +381,8 @@ export default function AboutUs() {
                                 </div>
 
                                 <p className="text-gray-700 leading-relaxed mb-6">
-                                    To become the world's most trusted platform for digital content access, fostering a future
-                                    where content barriers don't limit creativity, education, or personal expression. We envision
+                                    To become the world most trusted platform for digital content access, fostering a future
+                                    where content barriers do not limit creativity, education, or personal expression. We envision
                                     a world where digital content flows freely and securely.
                                 </p>
 
@@ -493,11 +485,13 @@ export default function AboutUs() {
                                         className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-amber-200/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center"
                                     >
                                         <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-4 border-gradient-to-r from-purple-600 to-blue-600">
-                                            <img
+                                            {/* <Image
                                                 src={member.image}
                                                 alt={member.name}
                                                 className="w-full h-full object-cover"
-                                            />
+                                                width={96}
+                                                height={96}
+                                            /> */}
                                         </div>
                                         <h3 className="text-xl font-bold text-gray-800 mb-1">{member.name}</h3>
                                         <div className="text-purple-600 font-medium mb-3">{member.role}</div>
@@ -667,7 +661,7 @@ export default function AboutUs() {
                                 © {new Date().getFullYear()} Social Fetcher. Built with ❤️ for the global community.
                             </p>
                             <p className="text-sm max-w-2xl mx-auto">
-                                We're more than just a tool - we're a community of creators, learners, and digital enthusiasts
+                                We are more than just a tool - we are a community of creators, learners, and digital enthusiasts
                                 working together to make content more accessible for everyone.
                             </p>
                         </footer>

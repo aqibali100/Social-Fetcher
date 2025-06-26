@@ -232,7 +232,7 @@ export default function ContactUs() {
                     <div className="text-center mb-16">
                         <div className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full mb-6 shadow-lg">
                             <MessageSquare className="w-5 h-5" />
-                            <span className="font-medium">We're Here to Help</span>
+                            <span className="font-medium">We are Here to Help</span>
                         </div>
 
                         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
@@ -241,7 +241,7 @@ export default function ContactUs() {
 
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
                             Have questions about Social Fetcher? Need technical support? Want to share feedback?
-                            We'd love to hear from you and help make your experience better.
+                            We would love to hear from you and help make your experience better.
                         </p>
                     </div>
 
@@ -399,7 +399,7 @@ export default function ContactUs() {
                                             </div>
                                             <span className="font-medium">Message sent successfully!</span>
                                         </div>
-                                        <p className="text-sm mt-1 ml-7">We'll get back to you within 24 hours.</p>
+                                        <p className="text-sm mt-1 ml-7">We will get back to you within 24 hours.</p>
                                     </div>
                                 )}
                             </form>
@@ -483,7 +483,7 @@ export default function ContactUs() {
 
                                 <div>
                                     <h4 className="font-semibold text-gray-800 mb-2">Do you store downloaded videos?</h4>
-                                    <p className="text-gray-600 text-sm">No, we don't store any downloaded content on our servers. Videos are processed temporarily and delivered directly to you.</p>
+                                    <p className="text-gray-600 text-sm">No, we do not store any downloaded content on our servers. Videos are processed temporarily and delivered directly to you.</p>
                                 </div>
 
                                 <div>
@@ -500,7 +500,7 @@ export default function ContactUs() {
                             <h3 className="text-2xl font-bold mb-4">Still Need Help?</h3>
                             <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
                                 Our support team is standing by to help you with any questions or issues you might have.
-                                Don't hesitate to reach out - we're here to make your Social Fetcher experience amazing!
+                                Do not hesitate to reach out - we are here to make your Social Fetcher experience amazing!
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -521,7 +521,7 @@ export default function ContactUs() {
 
                         <p className="text-sm">
                             © {new Date().getFullYear()} Social Fetcher. All rights reserved.
-                            We're committed to providing excellent customer support.
+                            We are committed to providing excellent customer support.
                         </p>
                     </footer>
                 </main>

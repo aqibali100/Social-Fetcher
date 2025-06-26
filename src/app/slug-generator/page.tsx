@@ -9,17 +9,11 @@ import { Separator } from '@/components/ui/separator';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import {
-  Copy, Check, Hash, Zap, Shield, Globe, Search, Star, ArrowRight, Sparkles, Download, Settings,
+  Copy, Check, Zap, Shield, Globe, Search, Star, ArrowRight, Sparkles, Download, Settings,
   Plus,
   Minus
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
-const seoProps = {
-  title: "Slug Generator | Social Fetcher",
-  description: "Learn more about Your Company Name, our mission, and values.",
-  keywords: "about, company, mission, values, Your Company Name",
-};
 
 const Particles = () => {
   return (

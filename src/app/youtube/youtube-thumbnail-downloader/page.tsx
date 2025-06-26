@@ -13,9 +13,6 @@ import {
   Copy, 
   Search, 
   Play, 
-  Image, 
-  Zap, 
-  Shield, 
   Clock,
   Star,
   Check,
@@ -25,14 +22,13 @@ import {
   ExternalLink,
   Youtube,
   Sparkles,
-  Globe,
   Users,
   TrendingUp,
-  Settings,
   ImageIcon,
   LinkIcon
 } from 'lucide-react';
 import { Separator } from '@radix-ui/react-separator';
+import Image from 'next/image';
 
 interface ThumbnailData {
   url: string;
@@ -204,11 +200,11 @@ const getVideoThumbnail = async () => {
   }
 };
 
-  const seoProps = {
-    title: "YouTube Thumbnail Downloader | Social Fetcher",
-    description: "Learn more about Your Company Name, our mission, and values.",
-    keywords: "about, company, mission, values, Your Company Name",
-  };
+  // const seoProps = {
+  //   title: "YouTube Thumbnail Downloader | Social Fetcher",
+  //   description: "Learn more about Your Company Name, our mission, and values.",
+  //   keywords: "about, company, mission, values, Your Company Name",
+  // };
   function formatViewCount(count) {
   const num = Number(count);
   if (num >= 1_000_000_000) return (num / 1_000_000_000).toFixed(0) + 'B';
@@ -271,7 +267,7 @@ const thumbnailEntries = videoData?.snippet?.thumbnails
             {i % 3 === 0 ? (
               <Youtube className="w-8 h-8 text-red-400" />
             ) : i % 3 === 1 ? (
-              <Image className="w-6 h-6 text-blue-400" />
+              <Download className="w-6 h-6 text-blue-400" />
             ) : (
               <Download className="w-7 h-7 text-green-400" />
             )}
@@ -402,7 +398,9 @@ const thumbnailEntries = videoData?.snippet?.thumbnails
                           <CardContent className="p-6">
                             <div className="flex items-start gap-4">
                               <div className="relative group">
-                                <img
+                                <Image
+                                  width={100}
+                                  height={100}
                                   src={videoData.snippet.thumbnails.default.url}
                                   alt="Video thumbnail"
                                   className="w-32 h-24 object-cover rounded-lg border border-gray-600 group-hover:scale-105 transition-transform duration-300"
@@ -448,8 +446,10 @@ const thumbnailEntries = videoData?.snippet?.thumbnails
     >
       <CardContent className="p-4 space-y-4">
         <div className="relative">
-          <img
+          <Image
             src={thumbnail.url}
+            width={100}
+            height={100}
             alt={`Thumbnail ${thumbnail.quality}`}
             className="w-full h-32 object-cover rounded-lg border border-gray-600"
           />
@@ -531,9 +531,11 @@ const thumbnailEntries = videoData?.snippet?.thumbnails
                             key={index}
                             className="flex items-center gap-4 p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300"
                           >
-                            <img
+                            <Image
                               src={item.thumbnailUrl}
                               alt="Thumbnail"
+                              width={100}
+                              height={100}
                               className="w-16 h-12 object-cover rounded-lg border border-gray-600"
                             />
                             <div className="flex-1 min-w-0">

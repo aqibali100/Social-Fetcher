@@ -97,7 +97,7 @@ export default function TikTokDownloader() {
  const fetchVideoData = async () => {
   setIsLoading(true);
   try {
-    const res = await fetch('/api/tiktokdownloader', {
+    const res = await fetch('', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ url }),

@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Download, Video,Users,Plus, Minus, Globe, Clock , Tag, Wand2, Image, Zap, Shield, Monitor, Smartphone, Tablet, Play, Star, TrendingUp, Sparkles,  Youtube,Facebook,Instagram,Music,Twitter,Linkedin,Twitch,Camera,} from 'lucide-react';
+import { Download, Video,   Plus, Minus, Globe, Clock , Tag, Wand2, Image, Zap, Shield, Monitor, Smartphone, Tablet, Play, Star, TrendingUp, Sparkles,  Youtube,Facebook,Instagram,Music,Twitter,Linkedin,Twitch,Camera,} from 'lucide-react';
 
 const platforms = [
   {
@@ -238,22 +238,19 @@ const testimonials: Testimonial[] = [
   }
 ];
 
-const stats = [
-  { icon: Download, label: "Downloads", value: "50M+", color: "from-blue-500 to-cyan-500" },
-  { icon: Users, label: "Active Users", value: "200K+", color: "from-purple-500 to-pink-500" },
-  { icon: Shield, label: "Uptime", value: "99.9%", color: "from-green-500 to-emerald-500" },
-  { icon: Zap, label: "Avg Speed", value: "5s", color: "from-orange-500 to-red-500" }
-];
+// const stats = [
+//   { icon: Download, label: "Downloads", value: "50M+", color: "from-blue-500 to-cyan-500" },
+//   { icon: Users, label: "Active Users", value: "200K+", color: "from-purple-500 to-pink-500" },
+//   { icon: Shield, label: "Uptime", value: "99.9%", color: "from-green-500 to-emerald-500" },
+//   { icon: Zap, label: "Avg Speed", value: "5s", color: "from-orange-500 to-red-500" }
+// ];
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const duplicatedPlatforms = [...platforms, ...platforms];
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
   const [visibleCards, setVisibleCards] = useState(4);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const updateVisibleCards = () => {
@@ -268,32 +265,6 @@ export default function Home() {
     return () => window.removeEventListener('resize', updateVisibleCards);
   }, []);
 
-  useEffect(() => {
-    if (!isPlaying) return;
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => {
-        const maxIndex = testimonials.length - visibleCards;
-        return prev >= maxIndex ? 0 : prev + 1;
-      });
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [isPlaying, visibleCards]);
-
-  const maxIndex = testimonials.length - visibleCards;
-
-  const goToSlide = (index: number) => {
-    setCurrentIndex(Math.max(0, Math.min(index, maxIndex)));
-  };
-
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => prev <= 0 ? maxIndex : prev - 1);
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prev) => prev >= maxIndex ? 0 : prev + 1);
-  };
 
   useEffect(() => {
     setIsVisible(true);

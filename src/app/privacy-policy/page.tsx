@@ -163,7 +163,7 @@ export default function PrivacyPolicy() {
                         </h1>
 
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                            We're committed to protecting your privacy and being transparent about how we collect, use, and protect your information.
+                            We are committed to protecting your privacy and being transparent about how we collect, use, and protect your information.
                         </p>
 
                         <div className="mt-8 text-sm text-gray-500">
@@ -192,7 +192,7 @@ export default function PrivacyPolicy() {
                                 </p>
 
                                 <p>
-                                    <strong>No Account Required:</strong> Social Fetcher doesn't require user registration or account creation. We don't collect personal information like names, email addresses, or phone numbers unless voluntarily provided for support purposes.
+                                    <strong>No Account Required:</strong> Social Fetcher does not require user registration or account creation. We don't collect personal information like names, email addresses, or phone numbers unless voluntarily provided for support purposes.
                                 </p>
                             </div>
                         </section>
@@ -214,7 +214,7 @@ export default function PrivacyPolicy() {
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mt-2"></div>
-                                        <span><strong>Service Improvement:</strong> To analyze usage patterns and improve our platform's performance and features</span>
+                                        <span><strong>Service Improvement:</strong> To analyze usage patterns and improve our platform for performance and features</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mt-2"></div>
@@ -288,7 +288,7 @@ export default function PrivacyPolicy() {
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mt-2"></div>
-                                        <span><strong>No Data Sharing:</strong> We don't sell, rent, or share your personal information with third parties for marketing purposes</span>
+                                        <span><strong>No Data Sharing:</strong> We do not sell, rent, or share your personal information with third parties for marketing purposes</span>
                                     </li>
                                 </ul>
                             </div>
@@ -352,7 +352,7 @@ export default function PrivacyPolicy() {
                                 </p>
 
                                 <p>
-                                    <strong>Age Restriction:</strong> Our service is intended for users aged 13 and above. We don't knowingly collect information from children under 13.
+                                    <strong>Age Restriction:</strong> Our service is intended for users aged 13 and above. We do not knowingly collect information from children under 13.
                                 </p>
                             </div>
                         </section>
@@ -374,7 +374,7 @@ export default function PrivacyPolicy() {
                                 <ul className="space-y-3">
                                     <li className="flex items-start gap-3">
                                         <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mt-2"></div>
-                                        <span>We will update the "Last updated" date at the top of this policy</span>
+                                        <span>We will update the Last updated date at the top of this policy</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <div className="w-2 h-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full mt-2"></div>
@@ -394,7 +394,7 @@ export default function PrivacyPolicy() {
                         <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-2xl p-8 shadow-xl">
                             <h2 className="text-2xl font-bold mb-4">Questions About Your Privacy?</h2>
                             <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
-                                If you have any questions about this Privacy Policy, need to exercise your rights, or have concerns about how we handle your information, please don't hesitate to reach out.
+                                If you have any questions about this Privacy Policy, need to exercise your rights, or have concerns about how we handle your information, please do not hesitate to reach out.
                             </p>
 
                             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

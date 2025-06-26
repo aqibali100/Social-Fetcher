@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -25,27 +25,14 @@ import {
   FileDown,
   RefreshCw,
   CheckCircle,
-  AlertCircle,
   Hash,
   Zap,
   Award,
   Brain,
   Lightbulb,
-  Search,
-  Filter,
   Settings,
-  Globe,
-  Users,
-  Calendar,
   Tag,
-  Rocket,
-  Star,
   Flame,
-  Eye,
-  ThumbsUp,
-  MessageSquare,
-  Share2,
-  Play,
   Video
 } from 'lucide-react';
 

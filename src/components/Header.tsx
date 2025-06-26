@@ -1,8 +1,10 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import {
-    ChevronDown, Globe, Menu, X, DownloadCloud, Tag, Edit, Image, Star
+    ChevronDown, Globe, Menu, X, DownloadCloud, Tag, Edit,
 } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 interface DropdownItem {
     label: string;
@@ -37,7 +39,7 @@ const Header: React.FC = () => {
                 {
                     label: 'YouTube Thumbnail Downloader',
                     href: '/youtube/youtube-thumbnail-downloader',
-                    icon: <Image className="w-4 h-4" />,
+                    icon: <DownloadCloud className="w-4 h-4" />,
                     description: 'Quickly extract high-quality thumbnails from YouTube videos.'
                 },
                 {
@@ -174,9 +176,9 @@ const Header: React.FC = () => {
                                 <div className="relative">
                                     <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl blur-lg opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
                                     <div className="relative w-30 rounded-xl transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                                        <a href='/'>
-                                            <img src="/images/Logo.png" alt="social-fetcher-logo" />
-                                        </a>
+                                        <Link href='/'>
+                                            <Image width={100} height={100} className="rounded-xl w-full h-full" src="/images/Logo.png" alt="social-fetcher-logo" />
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -336,9 +338,9 @@ const Header: React.FC = () => {
                             <div className="relative">
                                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl blur-lg opacity-30"></div>
                                 <div className="relative w-30 p-2 rounded-xl">
-                                    <a href='/'>
-                                        <img src="/images/Logo.png" alt="social-fetcher-logo" />
-                                    </a>
+                                    <Link href='/'>
+                                        <Image className="w-full h-full rounded-xl" width={100} height={100} src="/images/Logo.png" alt="social-fetcher-logo" />
+                                    </Link>
                                 </div>
                             </div>
                         </div>

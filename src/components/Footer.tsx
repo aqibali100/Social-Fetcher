@@ -2,11 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import { Mail, Phone, MapPin, Twitter, Facebook, Instagram, Youtube, Github, ArrowUp, Clock } from 'lucide-react';
 import { useHydrationFix } from './hooks/useHydrationFix';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
     const [showScrollTop, setShowScrollTop] = useState(false);
     const [hoveredFooterItem, setHoveredFooterItem] = useState<string | null>(null);
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const currentYear = new Date().getFullYear();
 
     const scrollToTop = () => {
@@ -14,18 +15,12 @@ export default function Footer() {
     };
 
     useEffect(() => {
-        const handleMouseMove = (e: MouseEvent) => {
-            setMousePosition({ x: e.clientX, y: e.clientY });
-        };
-
         const handleScroll = () => {
             setShowScrollTop(window.scrollY > 400);
         };
 
-        window.addEventListener('mousemove', handleMouseMove);
         window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener('mousemove', handleMouseMove);
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
@@ -165,9 +160,9 @@ export default function Footer() {
                                     <div className="inline-flex items-center gap-3 mb-6">
                                         <div className="relative">
                                             <div className="w-40 rounded-2xl flex items-center justify-center group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-lg">
-                                                <a href="/">
-                                                    <img src="/images/Logo.png" alt="Logo" />
-                                                </a>
+                                                <Link href="/">
+                                                    <Image src="/images/Logo.png" width={100} height={100} className='w-full h-full' alt="Logo" />
+                                                </Link>
                                             </div>
                                             <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full animate-ping"></div>
                                         </div>

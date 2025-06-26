@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -9,7 +9,7 @@ import { Separator } from '@/components/ui/separator';
 import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { Progress } from '@/components/ui/progress';
-import {FileText,Hash,Clock,Eye,BookOpen,Target,TrendingUp,Zap,BarChart3,PieChart,Activity,Sparkles,Copy,Check,Download,RefreshCw,Settings,Star,ArrowRight,MessageSquare,Globe,Search
+import {FileText,Hash,Clock,Eye,BookOpen,Target,TrendingUp,Zap,BarChart3,PieChart,Activity,Sparkles,Copy,Check,RefreshCw,Settings,Star,ArrowRight,MessageSquare,Globe,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -100,7 +100,7 @@ const analyzeText = (text: string): TextStats => {
   const averageSentencesPerParagraph = paragraphCount > 0 ? Math.round(sentenceCount / paragraphCount) : 0;
 
   // Word length analysis
-  const wordLengths = words.map(word => word.length);
+  // const wordLengths = words.map(word => word.length);
   const longestWord = words.reduce((longest, current) =>
     current.length > longest.length ? current : longest, '');
   const shortestWord = words.reduce((shortest, current) =>
@@ -220,10 +220,10 @@ export default function WordCounter() {
     { label: 'Paragraphs', value: stats.paragraphs, icon: BookOpen, color: 'text-orange-400' }
   ];
 
-  const seoProps = {
-    title: 'Word Counter | Social Fetcher',
-    description: 'Get instant word counting, advanced statistics, and goal tracking for your social media content. Simplify your social media workflow with our user-friendly tool. Try it now!',
-  }
+  // const seoProps = {
+  //   title: 'Word Counter | Social Fetcher',
+  //   description: 'Get instant word counting, advanced statistics, and goal tracking for your social media content. Simplify your social media workflow with our user-friendly tool. Try it now!',
+  // }
 
   return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -553,7 +553,7 @@ export default function WordCounter() {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Perfect For Every Content Creator</h2>
               <p className="text-gray-300 text-lg">
-                Whether you're creating social media content or writing articles, we've got you covered
+                Whether you are creating social media content or writing articles, we have got you covered
               </p>
             </div>
 

@@ -8,7 +8,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useParams } from 'next/navigation';
 
 // Mock blog data (in a real app, this would come from an API)
 const blogPost = {

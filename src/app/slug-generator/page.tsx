@@ -220,7 +220,7 @@ const startGeneratingSlugs = () => {
             {/* Main Input Section */}
             <Card className="max-w-4xl mx-auto bg-white/10 backdrop-blur-md border-white/20 shadow-2xl">
               <CardHeader className="pb-4">
-                <h2 className="text-white text-left text-2xl md:text-3xl font-bold leading-tight">Generate Your Slug</h2>
+                <h3 className="text-white text-left text-2xl md:text-3xl font-bold leading-tight">Generate Your Slug</h3>
                 <CardDescription className="text-gray-300 text-left">
                   Enter your text below and watch it transform into a perfect URL slug
                 </CardDescription>
@@ -301,7 +301,7 @@ const startGeneratingSlugs = () => {
                         onClick={handleCopy}
                         size="sm"
                         className={cn(
-                          "absolute right-2 top-2 transition-all duration-200 mt-1 cursor-pointer",
+                          "absolute right-0  top-25 transition-all duration-200 mt-1 cursor-pointer",
                           copied
                             ? "bg-green-500 hover:bg-green-600 text-white"
                             : "bg-white/10 hover:bg-white/20 text-white border border-white/20"
@@ -339,7 +339,8 @@ const startGeneratingSlugs = () => {
             Get perfect slugs in just a few simple steps
           </CardDescription>
         </CardHeader>
-        <section className="relative z-10 py-20 px-4 pt-0">
+      <div className='pb-20'>
+          <section className="relative z-10 py-20 px-4 pt-0">
           <div className="max-w-6xl mx-auto">
             <Card className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border-white/20">
               <CardContent className="space-y-8 p-5">
@@ -404,6 +405,7 @@ const startGeneratingSlugs = () => {
             </Card>
           </div>
         </section>
+      </div>
 
         {/* Features Section */}
         <section className="relative z-10 py-13 px-4 pt-0">

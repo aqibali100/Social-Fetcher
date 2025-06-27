@@ -21,7 +21,10 @@ import Link from 'next/link';
       bgAccent: "bg-blue-50",
       textAccent: "text-blue-600",
       stats: "10+ Platforms",
-      extraIcons: [<Smartphone className="w-3 h-3" />, <Tablet className="w-3 h-3" />],
+      extraIcons: [
+  <Smartphone className="w-3 h-3" key="smartphone-icon" />,
+  <Tablet className="w-3 h-3" key="tablet-icon" />
+],
       glowColor: "blue"
     },
     {
@@ -33,7 +36,7 @@ import Link from 'next/link';
       bgAccent: "bg-purple-50",
       textAccent: "text-purple-600",
       stats: "Up to 8K Quality",
-      extraIcons: [<Play className="w-3 h-3" />],
+      extraIcons: [<Play className="w-3 h-3" key="play-icon" />],
       glowColor: "purple"
     },
     {
@@ -45,7 +48,7 @@ import Link from 'next/link';
       bgAccent: "bg-emerald-50",
       textAccent: "text-emerald-600",
       stats: "AI-Powered",
-      extraIcons: [<TrendingUp className="w-3 h-3" />],
+      extraIcons: [<TrendingUp className="w-3 h-3" key="trending-icon" />],
       glowColor: "emerald"
     },
     {
@@ -57,7 +60,7 @@ import Link from 'next/link';
       bgAccent: "bg-orange-50",
       textAccent: "text-orange-600",
       stats: "ML-Generated",
-      extraIcons: [<Star className="w-3 h-3" />],
+      extraIcons: [<Star className="w-3 h-3" key="star-icon" />],
       glowColor: "orange"
     },
     {
@@ -69,7 +72,7 @@ import Link from 'next/link';
       bgAccent: "bg-indigo-50",
       textAccent: "text-indigo-600",
       stats: "Ultra-HD",
-      extraIcons: [<Sparkles className="w-3 h-3" />],
+      extraIcons: [<Sparkles className="w-3 h-3" key="sparkles-icon" />],
       glowColor: "indigo"
     },
     {
@@ -81,7 +84,7 @@ import Link from 'next/link';
       bgAccent: "bg-yellow-50",
       textAccent: "text-yellow-600",
       stats: "10x Faster",
-      extraIcons: [],
+      extraIcons: [] ,
       glowColor: "yellow"
     },
   ];
@@ -630,7 +633,7 @@ export default function Home() {
                 Still have questions?
               </h3>
               <p className="text-gray-600 mb-6">
-                Can't find the answer you're looking for? Our support team is here to help.
+                Can not find the answer you are looking for? Our support team is here to help.
               </p>
               <a href="/contact-us">
                 <button className="inline-flex cursor-pointer items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl">

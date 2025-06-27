@@ -161,7 +161,7 @@ export default function Footer() {
                         </div>
                         
                         {/* Contact Info */}
-                        <div className="flex justify-between items-center mt-12">
+                        <div className="flex justify-between items-center mt-12 flex-wrap gap-4">
                             <div className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-300 group cursor-pointer">
                                 <div className="w-10 h-10 bg-gray-800/50 rounded-xl flex items-center justify-center group-hover:bg-indigo-500/20 group-hover:scale-110 transition-all duration-300">
                                     <Mail className="w-4 h-4" />

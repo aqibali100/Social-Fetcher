@@ -10,6 +10,11 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 
+export const metadata = {
+  title: "Social Fetcher | Ultimate Social Media Downloader",
+  description: "Download YouTube videos in MP4 or MP3 format instantly using Social Fetcher.",
+};
+
 export default function RootLayout({
   children,
 }: {

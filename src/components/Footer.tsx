@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { Mail, Phone, MapPin, Twitter, Facebook, Instagram, Youtube, Github, ArrowUp, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowUp, Clock } from 'lucide-react';
 import { useHydrationFix } from './hooks/useHydrationFix';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -26,10 +26,10 @@ export default function Footer() {
     }, []);
     const footerLinks = {
         YouTube: [
-            { name: 'Tag Generator', href: '/youtube/youtube-video-tags-generator' },
-            { name: 'Tag Extractor', href: '/youtube/youtube-video-tags-extractor' },
-            { name: 'Video Downloader', href: '/youtube/youtube-video-downloader' },
-            { name: 'Thumbnail Downloader', href: '/youtube/youtube-thumbnail-downloader' },
+            { name: 'Tag Generator', href: '/youtube-video-tags-generator' },
+            { name: 'Tag Extractor', href: '/youtube-video-tags-extractor' },
+            { name: 'Video Downloader', href: '/youtube-video-downloader' },
+            { name: 'Thumbnail Downloader', href: '/youtube-thumbnail-downloader' },
         ],
         Instagram: [
             { name: 'Tag Generator', href: '/instagram' },
@@ -53,21 +53,6 @@ export default function Footer() {
             { name: 'Terms of Service', href: '/terms-of-services' },
         ],
     };
-
-    const socialLinks = [
-        { icon: <Twitter className="w-5 h-5" />, href: '#', name: 'Twitter', color: 'hover:text-blue-400' },
-        { icon: <Facebook className="w-5 h-5" />, href: '#', name: 'Facebook', color: 'hover:text-blue-600' },
-        { icon: <Instagram className="w-5 h-5" />, href: '#', name: 'Instagram', color: 'hover:text-pink-500' },
-        { icon: <Youtube className="w-5 h-5" />, href: '#', name: 'YouTube', color: 'hover:text-red-500' },
-        { icon: <Github className="w-5 h-5" />, href: '#', name: 'GitHub', color: 'hover:text-gray-900' }
-    ];
-
-    // const stats = [
-    //     { icon: <Users className="w-5 h-5" />, value: '2M+', label: 'Active Users' },
-    //     { icon: <Download className="w-5 h-5" />, value: '50M+', label: 'Downloads' },
-    //     { icon: <Globe className="w-5 h-5" />, value: '180+', label: 'Countries' },
-    //     { icon: <Award className="w-5 h-5" />, value: '99.9%', label: 'Uptime' }
-    // ];
 
     const { isClient } = useHydrationFix();
     const [positions, setPositions] = useState<Array<{
@@ -124,33 +109,6 @@ export default function Footer() {
                     ))}
                 </div>
 
-                {/* Stats Section */}
-                {/* <div className="relative border-b border-gray-700/50 py-16">
-                    <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                            {stats.map((stat, index) => (
-                                <div
-                                    key={index}
-                                    className="group text-center transform transition-all duration-700 hover:scale-105"
-                                    style={{ animationDelay: `${index * 200}ms` }}
-                                >
-                                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl mb-4 group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-lg group-hover:shadow-2xl group-hover:shadow-indigo-500/30">
-                                        <div className="text-white group-hover:scale-110 transition-transform duration-300">
-                                            {stat.icon}
-                                        </div>
-                                    </div>
-                                    <div className="text-3xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
-                                        {stat.value}
-                                    </div>
-                                    <div className="text-gray-400 text-sm font-medium group-hover:text-gray-300 transition-colors duration-300">
-                                        {stat.label}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div> */}
-
                 {/* Main Footer Content */}
                 <div className="relative py-16 pb-8">
                     <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -201,6 +159,7 @@ export default function Footer() {
                                 </div>
                             ))}
                         </div>
+                        
                         {/* Contact Info */}
                         <div className="flex justify-between items-center mt-12">
                             <div className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-300 group cursor-pointer">
@@ -222,30 +181,6 @@ export default function Footer() {
                                 <span className="text-sm">San Francisco, CA</span>
                             </div>
                         </div>
-
-                        {/* Newsletter Section */}
-                        {/* <div className="mt-16 pt-12 border-t border-gray-700/50">
-                            <div className="max-w-2xl mx-auto text-center">
-                                <h4 className="text-2xl font-bold text-white mb-4">Stay Updated</h4>
-                                <p className="text-gray-400 mb-8 text-sm">
-                                    Get the latest features, updates, and exclusive content delivered to your inbox.
-                                </p>
-                                <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                                    <div className="relative flex-1">
-                                        <input
-                                            type="email"
-                                            placeholder="Enter your email"
-                                            className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:bg-gray-800/70 transition-all duration-300 text-sm"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-xl opacity-0 focus-within:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                                    </div>
-                                    <button className="group relative px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/30 overflow-hidden text-sm">
-                                        <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                        <span className="relative z-10">Subscribe</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div> */}
                     </div>
                 </div>
 
@@ -255,22 +190,6 @@ export default function Footer() {
                         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                             <div className="flex items-center gap-2 text-gray-400 text-sm">
                                 <span>© {currentYear} Social Fetcher. All rights reserved.</span>
-                            </div>
-
-                            <div className="flex items-center gap-4">
-                                {socialLinks.map((social, index) => (
-                                    <a
-                                        key={index}
-                                        href={social.href}
-                                        className={`group relative w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-6 ${social.color}`}
-                                        title={social.name}
-                                    >
-                                        <div className="relative z-10 transition-transform duration-300 group-hover:scale-110">
-                                            {social.icon}
-                                        </div>
-                                        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                    </a>
-                                ))}
                             </div>
 
                             <div className="flex items-center gap-4 text-gray-400 text-sm">

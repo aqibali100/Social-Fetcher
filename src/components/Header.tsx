@@ -32,25 +32,25 @@ const Header: React.FC = () => {
             dropdown: [
                 {
                     label: 'YouTube Videos Downloader',
-                    href: '/youtube/youtube-video-downloader',
+                    href: '/youtube-video-downloader',
                     icon: <DownloadCloud className="w-4 h-4" />,
                     description: 'Efficiently download YouTube videos in various formats for offline access.'
                 },
                 {
                     label: 'YouTube Thumbnail Downloader',
-                    href: '/youtube/youtube-thumbnail-downloader',
+                    href: '/youtube-thumbnail-downloader',
                     icon: <DownloadCloud className="w-4 h-4" />,
                     description: 'Quickly extract high-quality thumbnails from YouTube videos.'
                 },
                 {
                     label: 'YouTube Video Tags Extractor',
-                    href: '/youtube/youtube-video-tags-extractor',
+                    href: '/youtube-video-tags-extractor',
                     icon: <Tag className="w-4 h-4" />,
                     description: 'Extract YouTube video tags to analyze content trends and SEO strategies.'
                 },
                 {
                     label: 'YouTube Video Tags Generator',
-                    href: '/youtube/youtube-video-tags-generator',
+                    href: '/youtube-video-tags-generator',
                     icon: <Edit className="w-4 h-4" />,
                     description: 'Generate effective and relevant video tags to optimize video discoverability.'
                 }
@@ -186,12 +186,12 @@ const Header: React.FC = () => {
                             {/* Desktop Navigation */}
                             <nav className="hidden lg:flex items-center space-x-1">
                                 {navItems.map((item, index) => (
-                                    <div key={item.label} className="relative group">
+                                    <div key={item.label} className="relative group cursor-pointer">
                                         {item.dropdown ? (
                                             <button
                                                 onClick={() => handleDropdownToggle(item.label)}
                                                 onMouseEnter={() => setActiveDropdown(item.label)}
-                                                className="flex items-center space-x-1 px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-lg hover:bg-blue-50/50 group transform hover:scale-105"
+                                                className="flex items-center cursor-pointer space-x-1 px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-lg hover:bg-blue-50/50 group transform hover:scale-105"
                                                 style={{ animationDelay: `${index * 100}ms` }}
                                             >
                                                 <span className="relative">
@@ -261,7 +261,7 @@ const Header: React.FC = () => {
                                 <div className="relative">
                                     <button
                                         onClick={() => handleDropdownToggle('language')}
-                                        className="flex items-center space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-lg hover:bg-blue-50/50 group transform hover:scale-105"
+                                        className="flex items-center cursor-pointer space-x-2 px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-all duration-300 rounded-lg hover:bg-blue-50/50 group transform hover:scale-105"
                                     >
                                         <Globe className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
                                         <span className="hidden sm:inline">{selectedLanguage}</span>

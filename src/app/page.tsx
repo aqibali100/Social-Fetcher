@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Download, Video,   Plus, Minus, Globe, Clock , Tag, Wand2, Image, Zap, Shield, Monitor, Smartphone, Tablet, Play, Star, TrendingUp, Sparkles,  Youtube,Facebook,Instagram,Music,Twitter,Linkedin} from 'lucide-react';
+import Link from 'next/link';
 
   interface FAQItem {
     id: string;
@@ -241,10 +242,10 @@ export default function Home() {
              <div className="hidden sm:mb-8 sm:flex sm:justify-center mt-10">
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               Explorer our latest blog posts.{' '}
-              <a href="/blogs" className="font-semibold text-indigo-600">
+              <Link href="/blogs" className="font-semibold text-indigo-600">
                 <span aria-hidden="true" className="absolute inset-0" />
                 Read more <span aria-hidden="true">&rarr;</span>
-              </a>
+              </Link>
             </div>
           </div>
           </div>

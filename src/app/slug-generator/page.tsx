@@ -14,6 +14,44 @@ import {
   Minus
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+  interface FAQItem {
+    id: number;
+    question: string;
+    answer: string;
+  }
+
+  const faqData: FAQItem[] = [
+    {
+      id: 1,
+      question: "What is a slug in a web URL?",
+      answer: "A slug is a human-readable URL segment that identifies a specific page or content within a website."
+    },
+    {
+      id: 2,
+      question: "What is a slug generator used for?",
+      answer: "A slug generator is a tool used to generate human-readable URLs for web pages, articles, or other content. It takes a text input and generates a slug that can be used as a URL segment."
+    },
+    {
+      id: 3,
+      question: "What is the slug generator's mechanism?",
+      answer: "Simply, a slug generator takes a text input and generates a slug that can be used as a URL segment. It typically uses a combination of lowercase letters, numbers, and hyphens to create a slug that is easy to read and understand."
+    },
+    {
+      id: 4,
+      question: "Can I separate slugs with spaces?",
+      answer: "Yes, you can separate slugs with spaces if needed. The slug generator will handle this and generate a slug that is easy to read and understand."
+    },
+    {
+      id: 5,
+      question: "Is the tool free to use?",
+      answer: "Yes, the slug generator is completely free to use. You can use it for personal or commercial purposes without any restrictions."
+    },
+    {
+      id: 6,
+      question: "Will the tool have an impact on my website's SEO?",
+      answer: "Yes, the slug generator will not have any impact on your website's SEO. It generates slugs that are easy to read and understand, which is important for SEO optimization."
+    }
+  ];
 
 const Particles = () => {
   return (
@@ -130,44 +168,7 @@ const startGeneratingSlugs = () => {
   }
 };
 
-  interface FAQItem {
-    id: number;
-    question: string;
-    answer: string;
-  }
 
-  const faqData: FAQItem[] = [
-    {
-      id: 1,
-      question: "What is a slug in a web URL?",
-      answer: "A slug in a web URL is string of characters that identifies a specific resource or page on a website. It is the part of the URL that comes after the domain name and before the query parameters or fragment."
-    },
-    {
-      id: 2,
-      question: "What is a slug generator used for?",
-      answer: "Slug generator is used for creating unique and user-friendly URLs for your website's content. It helps in generating SEO-friendly slugs that are easy to remember and shareable."
-    },
-    {
-      id: 3,
-      question: "What is the slug generator's mechanism?",
-      answer: "Yes, we offer comprehensive post-launch support including maintenance, updates, bug fixes, and technical assistance. We have various support packages available, from basic maintenance to full-scale ongoing development partnerships."
-    },
-    {
-      id: 4,
-      question: "Can I separate slugs with spaces?",
-      answer: "Our pricing is project-based and depends on the specific requirements, complexity, and timeline. We offer transparent pricing with detailed quotes that break down all costs. We also provide flexible payment plans and can work within various budget ranges."
-    },
-    {
-      id: 5,
-      question: "Is the tool free to use?",
-      answer: "Absolutely! We're experienced in collaborating with existing teams and can integrate seamlessly into your current workflow. Whether you need additional development resources, specialized expertise, or project leadership, we adapt to your team's needs and processes."
-    },
-    {
-      id: 6,
-      question: "Will the tool have an impact on my website's SEO?",
-      answer: "We work with a wide range of modern technologies including React, Vue.js, Node.js, Python, PHP, mobile frameworks like React Native and Flutter, cloud platforms like AWS and Azure, and many other cutting-edge tools and frameworks."
-    }
-  ];
 
   const features = [
     {
@@ -511,9 +512,6 @@ const startGeneratingSlugs = () => {
             <h2 className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent text-4xl font-bold mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="mt-3 text-lg font-medium text-pretty text-white sm:text-xl/8 mb-8">
-              Find answers to common questions about our services, process,<br></br> and how we can help bring your vision to life.
-            </p>
           </div>
 
           {/* FAQ Items */}
@@ -547,7 +545,7 @@ const startGeneratingSlugs = () => {
                   {/* Question Button */}
                   <button
                     onClick={() => toggleItem(item.id)}
-                    className="relative w-full px-8 py-2 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-2xl focus:bg-transparent cursor-pointer"
+                    className="relative w-full px-4 py-2 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-2xl focus:bg-transparent cursor-pointer"
                     aria-expanded={isOpen}
                   >
                     <div className="flex items-center justify-between">
@@ -560,7 +558,7 @@ const startGeneratingSlugs = () => {
 
                       {/* Animated Icon Container */}
                       <div
-                        className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center
+                        className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center
                 transition-all duration-500 ease-out transform cursor-pointer
                 ${isOpen
                             ? 'bg-blue-500 text-white scale-110 rotate-180'
@@ -585,7 +583,7 @@ const startGeneratingSlugs = () => {
             ${isOpen ? 'max-h-96 opacity-100 bg-none' : 'max-h-0 opacity-0'}
           `}
                   >
-                    <div className="px-8 pb-8 bg-none">
+                    <div className="px-4 pb-8 bg-none">
                       <div className={`pt-2 border-t border-gray-100 transition-all duration-500 ease-out delay-100
               ${isOpen ? 'transform translate-y-0 bg-none' : 'transform -translate-y-4'}
             `}>

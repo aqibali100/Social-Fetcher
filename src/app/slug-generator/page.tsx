@@ -168,8 +168,6 @@ const startGeneratingSlugs = () => {
   }
 };
 
-
-
   const features = [
     {
       icon: Zap,

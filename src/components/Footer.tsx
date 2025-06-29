@@ -44,6 +44,7 @@ export default function Footer() {
             { name: 'JPG to PNG Converter', href: '#' },
             { name: 'Video to Audio Converter', href: '#' },
             { name: 'PNG to PDF Converter', href: '#' },
+            { name: 'Image Compressor', href: '/image-compressor' },
         ],
         company: [
             { name: 'Blogs', href: '/blogs' },
